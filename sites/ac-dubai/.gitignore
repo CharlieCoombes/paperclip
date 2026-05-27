@@ -1,0 +1,15 @@
+node_modules
+.next
+out
+build
+dist
+.env*.local
+*.log
+.DS_Store
+next-env.d.ts
+.vercel
+.turbo
+
+# Override root .gitignore's generic `data/` rule — our directory data lives here
+!src/data/
+!src/data/**

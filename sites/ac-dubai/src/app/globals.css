@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white text-ink-800 antialiased;
+    font-feature-settings: 'cv11', 'ss01', 'ss03';
+  }
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight text-ink-900;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold transition-colors focus:outline-none focus:ring-4 focus:ring-brand-500/20;
+  }
+  .btn-primary {
+    @apply btn bg-ink-900 text-white hover:bg-ink-800;
+  }
+  .btn-accent {
+    @apply btn bg-accent-500 text-white hover:bg-accent-600;
+  }
+  .btn-ghost {
+    @apply btn bg-white text-ink-800 ring-1 ring-inset ring-ink-200 hover:bg-ink-50;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1 rounded-full bg-ink-100 px-2.5 py-1 text-xs font-medium text-ink-700;
+  }
+  .chip-accent {
+    @apply chip bg-accent-50 text-accent-700;
+  }
+  .chip-brand {
+    @apply chip bg-brand-50 text-brand-800;
+  }
+  .chip-green {
+    @apply chip bg-emerald-50 text-emerald-700;
+  }
+  .card {
+    @apply rounded-2xl bg-white shadow-card ring-1 ring-ink-100 transition-shadow hover:shadow-soft;
+  }
+  .section-title {
+    @apply font-display text-2xl font-bold text-ink-900 sm:text-3xl;
+  }
+  .section-eyebrow {
+    @apply text-xs font-semibold uppercase tracking-widest text-brand-700;
+  }
+  .prose-body {
+    @apply prose-base max-w-none leading-relaxed text-ink-700;
+  }
+}
